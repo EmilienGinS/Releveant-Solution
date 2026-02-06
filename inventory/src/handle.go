@@ -47,11 +47,9 @@ func PSKillHandler(w http.ResponseWriter, r *http.Request) {
 	pid := r.PathValue("pid")
 	
 	myProcs, err := process.Processes()
-	fmt.Println(myProcs)
 	w.Header().Set("Content-Type", "application/json")
 
 	for _, proc := range myProcs {
-		fmt.Println(pid, proc.Pid)
 		if strconv.Itoa(int(proc.Pid)) == pid {
 			err := proc.Kill()
 			if err != nil {
