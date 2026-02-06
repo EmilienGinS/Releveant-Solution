@@ -1,4 +1,10 @@
 # 🚀 Relevant-Solution
+<p align="center">
+  <img src="img/Logo/Logo.png" alt="Logo-Releveant" width="150">
+</p>
+
+### 🧑‍💼 Lead Product Manager
+* **Samuel Collado**
 
 ### 👥 Participants
 * **Gineys Emilien**
@@ -7,6 +13,10 @@
 * **Djessim Slimani**
 
 ---
+
+<p align="center">
+  <img src="img/Logo/Inventory.png" alt="Logo-Releveant" width="150">
+</p>
 
 ## 🛠 Inventory
 
@@ -22,7 +32,11 @@ La solution est maintenant disponible et accessible via :
 
 ---
 
-## 🛠 Inventory
+<p align="center">
+  <img src="img/Logo/Build up.png" alt="Logo-Releveant" width="150">
+</p>
+
+## 🛠 Build Up
 
 ### 📥 Étapes d'installation
 
