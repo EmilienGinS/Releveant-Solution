@@ -39,7 +39,9 @@ export class App {
         label: 'Grafana',
         icon: 'pi pi-star',
         command: () => {
-          window.open('http://grafana.releveant.projet.filiere.info/');
+          window.open(
+            'http://grafana.releveant.projet.filiere.info/d/adfrpg2/cpu?orgId=1&from=now-6h&to=now&timezone=browser',
+          );
         },
       },
       {
