@@ -18,6 +18,12 @@ http:
       service: "service-pc2"
       entryPoints: ["web"]
 
+     # Route pour le hub
+    router-hub:
+      rule: "Host(`hub.releveant.projet.filiere.info`)"
+      service: "service-hub"
+      entryPoints: ["web"]
+
   services:
     service-srv1:
       loadBalancer:
@@ -33,3 +39,8 @@ http:
       loadBalancer:
         servers:
           - url: "http://10.4.253.120:8080"
+
+    service-hub:
+      loadBalancer:
+        servers:
+          - url: "http://10.4.244.86:8888"
