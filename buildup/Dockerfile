@@ -15,7 +15,7 @@ FROM busybox
 COPY src/www /www
 COPY src/.env /
 COPY src/servers.yaml /
-COPY --from=builder /go/bin/buildup /buildup
+COPY --from=builder /go/bin/buildup_linux /buildup
 
 # Partages
 EXPOSE 80
