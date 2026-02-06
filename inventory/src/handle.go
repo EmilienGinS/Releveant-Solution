@@ -47,9 +47,11 @@ func PSKillHandler(w http.ResponseWriter, r *http.Request) {
 	pid := r.PathValue("pid")
 	
 	myProcs, err := process.Processes()
+	fmt.Println(myProcs)
 	w.Header().Set("Content-Type", "application/json")
 
 	for _, proc := range myProcs {
+		fmt.Println(pid, proc.Pid)
 		if strconv.Itoa(int(proc.Pid)) == pid {
 			err := proc.Kill()
 			if err != nil {
@@ -58,15 +60,13 @@ func PSKillHandler(w http.ResponseWriter, r *http.Request) {
 			}
 			json.NewEncoder(w).Encode("Process killed")
 			return
-		} else {
-			json.NewEncoder(w).Encode("No process found")
-			return
 		}
 	}
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
+	json.NewEncoder(w).Encode("No process found")
 }
 
 func NetHandler(w http.ResponseWriter, r *http.Request) {
