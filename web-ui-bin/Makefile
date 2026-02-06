@@ -6,3 +6,12 @@ build:
 
 clean:
 	@rm bin/web-ui
+
+image:
+	@docker build -t web-ui:latest .
+
+start:
+	@docker run -d -p 8888:8888 --name web-ui web-ui:latest
+
+stop:
+	@docker rm -f inventory

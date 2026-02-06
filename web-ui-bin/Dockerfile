@@ -6,8 +6,8 @@ COPY Makefile /go
 RUN make build
 
 FROM busybox
-COPY --from=builder /go/bin/periserv /periserv
+COPY --from=builder /go/bin/web-ui /web-ui
 
 EXPOSE 8888
 
-ENTRYPOINT ["/periserv"]
+ENTRYPOINT ["/web-ui"]
