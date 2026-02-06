@@ -1,0 +1,35 @@
+http:
+  routers:
+    # Route pour le PC 1
+    router-pc1:
+      rule: "Host(`pc1.releveant.projet.filiere.info`)"
+      service: "service-pc1"
+      entryPoints: ["web"]
+
+    # Route pour le PC 2
+    router-pc2:
+      rule: "Host(`pc2.releveant.projet.filiere.info`)"
+      service: "service-pc2"
+      entryPoints: ["web"]
+
+     # Route pour le PC 3
+    router-local:
+      rule: "Host(`pc3.releveant.projet.filiere.info`)"
+      service: "service-pc3"
+      entryPoints: ["web"]
+
+  services:
+    service-pc1:
+      loadBalancer:
+        servers:
+          - url: "http://10.4.244.93:8080"
+
+    service-pc2:
+      loadBalancer:
+        servers:
+          - url: "http://10.4.247.178:8080"
+
+    service-pc3:
+      loadBalancer:
+        servers:
+          - url: "http://10.4.253.120:8080"
