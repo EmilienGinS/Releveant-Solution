@@ -1,20 +1,20 @@
-# Releveant-Solution
+# 🚀 Relevant-Solution
 
-### Participants :
+### 👥 Participants
+* **Gineys Emilien**
 
+---
 
-## Inventory
+## 🛠 Inventory & Installation
 
-**Installation de la solution**
+### 📥 Étapes d'installation
 
-Etape n°1 :
+1. **Téléchargement** : Récupérer l'exécutable depuis les releases.
+2. **Lancement** : Exécuter le fichier binaire sur votre machine.
 
-    Télécharcher l'exécutable.
+### 🏁 Résultat
+La solution est maintenant disponible et accessible via :
+> 🔗 **URL** : `http://localhost:8080`
 
-Etape n°2 :
-
-    Exécuter l'exécutable.
-
-Résulat :
-
-    La solution est dispobile sur le port 8080
+---
+*Dernière mise à jour : Février 2026*
