@@ -16,11 +16,13 @@ export class App {
   showPC1 = signal(false);
   showPC2 = signal(false);
   showSRV1 = signal(false);
+  showHome = signal(true);
 
   hideAll() {
     this.showPC1 = signal(false);
     this.showPC2 = signal(false);
     this.showSRV1 = signal(false);
+    this.showHome = signal(false);
   }
 
   ngOnInit() {
@@ -30,6 +32,7 @@ export class App {
         icon: 'pi pi-home',
         command: () => {
           this.hideAll();
+          this.showHome.set(true);
         },
       },
       {

@@ -13,3 +13,178 @@
 @if (showSRV1()) {
   <app-srv1></app-srv1>
 }
+
+@if (showHome()) {
+  <html lang="fr">
+    <head>
+      <meta charset="UTF-8" />
+      <title>RELEVANT - Dashboard Central</title>
+      <style>
+        body {
+          background-color: #c0c0c0; /* Gris Windows 95 */
+          font-family: 'Courier New', Courier, monospace;
+          color: #000;
+          margin: 20px;
+        }
+
+        header {
+          border: 3px ridge #fff;
+          background-color: #000080; /* Bleu Windows */
+          color: white;
+          padding: 10px;
+          text-align: center;
+        }
+
+        .container {
+          border: 2px solid #555;
+          background: #fff;
+          padding: 20px;
+          margin-top: 10px;
+        }
+
+        h1,
+        h2 {
+          margin-top: 0;
+        }
+
+        .logos {
+          display: flex;
+          justify-content: space-around;
+          background: #eee;
+          padding: 10px;
+          border: 1px inset #888;
+        }
+
+        .logo-box {
+          border: 1px dashed #f00;
+          padding: 5px;
+          text-align: center;
+          font-weight: bold;
+        }
+
+        .stack {
+          background-color: #ffffcc;
+          border: 1px solid #000;
+          padding: 10px;
+          margin: 10px 0;
+        }
+
+        .solution {
+          margin-bottom: 20px;
+          padding: 10px;
+          border-left: 5px solid #000080;
+        }
+
+        marquee {
+          background: #ff0;
+          font-weight: bold;
+          border: 1px solid #000;
+        }
+
+        .links {
+          margin-top: 20px;
+        }
+
+        button {
+          cursor: pointer;
+          border: 2px outset #fff;
+          background: #c0c0c0;
+          padding: 5px 10px;
+        }
+
+        button:active {
+          border: 2px inset #fff;
+        }
+      </style>
+    </head>
+    <body>
+      <header>
+        <h1>RELEVANT CORPORATION - SITE OFFICIEL</h1>
+        <p>Parce que le JSON, c'est la vie.</p>
+      </header>
+
+      <marquee>
+        ALERTE : Build Up est en train de pomper les données... Merci de ne pas débrancher les
+        machines sur le port 8080.
+      </marquee>
+
+      <div class="container">
+        <div class="logos">
+          <div class="logo-box">
+            <img
+              src="https://nextcloud.evoliatis.fr/index.php/apps/files_sharing/publicpreview/wbxbtrCyw32yLH6?file=/Logo.png&fileId=659285&x=2880&y=1800&a=true"
+              width="250"
+            />
+          </div>
+          <div class="logo-box">
+            <img
+              src="https://nextcloud.evoliatis.fr/index.php/apps/files_sharing/publicpreview/wbxbtrCyw32yLH6?file=/Inventory.png&fileId=659283&x=2880&y=1800&a=true"
+              width="250"
+            />
+          </div>
+          <div class="logo-box">
+            <img
+              src="https://nextcloud.evoliatis.fr/index.php/apps/files_sharing/publicpreview/wbxbtrCyw32yLH6?file=/Build%20up.png&fileId=659281&x=2880&y=1800&a=true"
+              width="250"
+            />
+          </div>
+        </div>
+
+        <h2>Présentation du Projet</h2>
+        <p>On récupère de la donnée, on la stocke, et on prie pour que le Grafana ne tombe pas.</p>
+
+        <div class="solution">
+          <h3>1. Solution Inventory</h3>
+          <p>
+            L'exécutable tourne sur les machines. Si tu vas sur le <strong>port 8080</strong>, tu
+            trouveras quelques vues HTML parce que c'est sympas et du pur JSON bien gras.
+          </p>
+        </div>
+
+        <div class="solution">
+          <h3>2. Solution Build Up</h3>
+          <p>
+            C'est le cerveau (en Golang, s'il vous plaît). Il interroge les API des machines, aspire
+            tout ce qu'il peut et balance ça dans la base.
+          </p>
+        </div>
+
+        <div class="stack">
+          <strong>Notre Stack de compétition :</strong>
+          <ul>
+            <li><strong>Langage :</strong> Golang (parce que c'est rapide)</li>
+            <li>
+              <strong>Stockage :</strong> InfluxDB (pour les séries temporelles qui font mal à la
+              tête)
+            </li>
+            <li>
+              <strong>Visualisation :</strong> Grafana (pour faire des jolis dessins aux chefs)
+            </li>
+            <li>
+              <strong>Infrastructure :</strong> Docker + Traefik (pour faire genre on gère le
+              réseau)
+            </li>
+          </ul>
+        </div>
+
+        <div class="links">
+          <h2>Accès Rapides</h2>
+          <button>
+            <a target="_blank" href="http://influx.releveant.projet.filiere.info/"
+              >Accéder à Influxdb</a
+            >
+          </button>
+          <button>
+            <a target="_blank" href="http://grafana.releveant.projet.filiere.info/"
+              >Accéder à grafana</a
+            >
+          </button>
+        </div>
+      </div>
+
+      <footer style="margin-top: 20px; font-size: 0.8em; text-align: center">
+        Optimisé pour Internet Explorer 6.0 | © 2026 Relevant Entreprise
+      </footer>
+    </body>
+  </html>
+}
